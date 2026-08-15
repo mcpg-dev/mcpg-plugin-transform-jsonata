@@ -1,0 +1,14 @@
+schema: mcpg.dev/plugin/v1
+id: dev.mcpg.transform.jsonata
+name: JSONata Transform
+license: Apache-2.0
+description: |
+  Applies an operator-supplied JSONata expression to a JSON value. As a
+  global transform it reshapes tool arguments (pre-dispatch) and/or results
+  (post-dispatch); as a pipeline `plugin_transform` step it reshapes the
+  previous step's output into the next step's input, with the expression
+  reading `steps.<id>.output` and `arguments.*`. Pure compute — no I/O.
+class: transform
+runtime: native-cdylib-v1
+protocol_version: "1.0"
+required_capabilities: []
