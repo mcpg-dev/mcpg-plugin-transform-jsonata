@@ -29,7 +29,7 @@ named by a pipeline `plugin_transform` step for a single binding.
 plugins:
   - id: dev.mcpg.transform.jsonata
     class: transform
-    source: { oci: ghcr.io/mcpg-dev/source-code/plugins/transform-jsonata:protocol-1 }
+    source: { oci: ghcr.io/mcpg-dev/plugins/transform-jsonata }
     config:
       phase: arguments
       expression: '{ "names": items.name, "total": $sum(items.qty) }'
